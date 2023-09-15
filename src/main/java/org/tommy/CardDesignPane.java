@@ -59,7 +59,7 @@ public class CardDesignPane extends Pane {
     }
 
     private void initialize() {
-        Image template = new Image("C:\\Users\\tommy\\Documents\\CardDesigner\\src\\res\\BaseCard.png");
+        Image template = new Image("/BaseCard.png");
         templateView = new ImageView(template);
         templateView.setPreserveRatio(true);
         templateView.setFitWidth(desiredWidth);
