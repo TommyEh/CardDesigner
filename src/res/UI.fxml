@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import org.tommy.CardDesignPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1111.0" style="-fx-background-color: #1b2432;" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.tommy.CardController">
+    <children>
+        <ScrollPane hbarPolicy="NEVER" layoutX="24.0" layoutY="13.0" prefHeight="694.0" prefWidth="512.0" style="-fx-border-width: 4; -fx-border-color: #6B728E; -fx-border-radius: 12; -fx-background-color: #2c2b3c; -fx-background-radius: 12;" vbarPolicy="NEVER">
+            <VBox maxWidth="502.0" prefHeight="510.0" prefWidth="502.0" scaleShape="false" spacing="10" style="-fx-border-radius: 12;">
+                <TitledPane text="Basics">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" style="-fx-background-color: #1b2432; -fx-border-color: #6B728E; -fx-background-radius: 0;">
+                            <children>
+                                <Label layoutX="22.0" layoutY="18.0" text="Card Type" textFill="WHITE" />
+                                <TextField fx:id="cardNameField" layoutX="30.0" layoutY="61.0" prefHeight="28.0" prefWidth="380.0" promptText="Your Card Name">
+                                    <font>
+                                        <Font name="Lato Bold" size="12.0" />
+                                    </font>
+                                </TextField>
+                                <Label layoutX="22.0" layoutY="105.0" text="Card Effect" textFill="WHITE" />
+                                <TextField fx:id="cardEffectField" layoutX="29.0" layoutY="143.0" prefHeight="28.0" prefWidth="380.0" promptText="Your Card Effect">
+                                    <font>
+                                        <Font name="Lato Bold" size="12.0" />
+                                    </font>
+                                </TextField>
+                                <Label layoutX="22.0" layoutY="186.0" text="Card Text" textFill="WHITE">
+                                    <font>
+                                        <Font name="Impact" size="24.0" />
+                                    </font>
+                                </Label>
+                                <TextField fx:id="cardTextField" layoutX="29.0" layoutY="224.0" prefHeight="28.0" prefWidth="380.0" promptText="Your Card Text">
+                                    <font>
+                                        <Font name="Lato Bold" size="12.0" />
+                                    </font>
+                                </TextField>
+                            </children>
+                        </AnchorPane>
+                    </content>
+               <padding>
+                  <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+               </padding>
+                </TitledPane>
+
+                <TitledPane text="Artwork">
+                    <content>
+                        <VBox spacing="10" style="-fx-background-color: #1b2432;">
+                            <Label text="Upload your Artwork" textFill="WHITE" />
+                            <Button fx:id="uploadArtworkButton" onAction="#handleUploadArtwork" style="-fx-max-width: Infinity;" text="Upload Artwork" />
+                        </VBox>
+                    </content>
+               <padding>
+                  <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+               </padding>
+                </TitledPane>
+            <padding>
+               <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+            </padding>
+
+            </VBox>
+        </ScrollPane>
+
+        <Pane layoutX="568.0" layoutY="13.0" prefHeight="694.0" prefWidth="512.0" style="-fx-border-width: 4; -fx-border-color: #6B728E; -fx-border-radius: 12; -fx-background-color: #2c2b3c; -fx-background-radius: 12;">
+            <children>
+                <CardDesignPane fx:id="cardDesignPane" layoutX="75.0" layoutY="72.0" />
+                <Button fx:id="downloadButton" layoutX="221.0" layoutY="640.0" mnemonicParsing="false" onAction="#handleDownloadCard" text="Download" />
+            </children>
+        </Pane>
+    </children>
+</AnchorPane>
